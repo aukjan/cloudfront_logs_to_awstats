@@ -7,21 +7,21 @@ from dateutil import parser
 
 
 def create_log(date_string):
-    cmd = "/usr/share/awstats/tools/logresolvemerge.pl /home/ubuntu/log/video/videoEFQ1SZJSIIMGH.%s.*.gz >> /home/ubuntu/log/video.log" % date_string
+    cmd = "/usr/share/awstats/tools/logresolvemerge.pl /some/path/to/file.%s.*.gz >> /some/path/to/output.log" % date_string
     print cmd
     os.system(cmd)
 
 
 def run_awstat():
-    os.system("sudo /usr/lib/cgi-bin/awstats.pl --config=video.kookse.tv -showdropped")
+    os.system("sudo /usr/lib/cgi-bin/awstats.pl --config=tobeconfigured -showdropped")
 
 
 def remove_files(date_string):
-    os.system("rm -f /home/ubuntu/log/video/videoEFQ1SZJSIIMGH.%s.*.gz" % date_string)
+    os.system("rm -f /some/path/to/file.%s.*.gz" % date_string)
 
 
 def clear():
-    os.system("rm -f /home/ubuntu/log/video.log")
+    os.system("rm -f /some/path/to/output.log")
     pass
 
 

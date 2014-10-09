@@ -18,7 +18,7 @@ class AwstatsLog:
     AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
     AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 
-    def __init__(self, log_base='/tmp/logs/video.kookse.tv', bucket_name=None, prefix=None, delete=False):
+    def __init__(self, log_base='logfile', bucket_name=None, prefix=None, delete=False):
         self.delete = delete
         self.log_base = log_base
         self.s3_conn = None
